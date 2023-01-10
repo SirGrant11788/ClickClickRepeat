@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      .container {
-        display: flex;
-        flex-direction: column;
-      }
-      .sessions-container {
-        margin-top: 10px;
-      }
-      .replay-button {
-        margin-right: 10px;
-      }
-      .delete-button {
-        color: red;
-      }
-    </style>
+    <title>Mouse and Keyboard Tracker</title>
+    <script src="popup.js"></script>
   </head>
   <body>
-    <div class="container">
-      <button id="start-button">Start Recording</button>
-      <button id="stop-button" disabled>Stop Recording</button>
-      <div class="sessions-container">
-        <h3>Recorded Sessions:</h3>
-        <div id="sessions"></div>
-      </div>
-    </div>
-    <script src="popup.js"></script>
+    <h1>Mouse and Keyboard Tracker</h1>
+    <button id="start-stop-button">Start/Stop</button>
+    <ul id="session-items"></ul>
   </body>
 </html>
