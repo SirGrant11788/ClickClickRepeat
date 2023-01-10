@@ -70,5 +70,5 @@ function deleteSession(sessionId) {
   });
 }
 
-// Initialize the list of recorded sessions
-refreshSessions();
+// // Initialize the list of recorded sessions
+// refreshSessions();

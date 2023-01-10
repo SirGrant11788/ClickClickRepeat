@@ -8,6 +8,11 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     document.removeEventListener("keydown", keydownListener);
     document.removeEventListener("mousedown", mousedownListener);
   }
+  if (message.type == "startRecording") {
+    // Start recording
+    document.addEventListener("keydown", keydownListener);
+    document.addEventListener("mousedown", mousedownListener);
+  }
 });
 
 // Listen for keydown events and send them to the background script
@@ -18,7 +23,7 @@ function keydownListener(event) {
     timeStamp: event.timeStamp
   });
 }
-document.addEventListener("keydown", keydownListener);
+
 
 // Listen for mousedown events and send them to the background script
 function mousedownListener(event) {
@@ -29,4 +34,4 @@ function mousedownListener(event) {
     timeStamp: event.timeStamp
   });
 }
-document.addEventListener("mousedown", mousedownListener);
+
